@@ -1,10 +1,11 @@
 import React from 'react';
 import { RecoilRoot } from 'recoil';
+import TodoList from './TodoList';
 
 export default function App() {
   return (
     <RecoilRoot>
-      <h1>hello world</h1>
+      <TodoList />
     </RecoilRoot>
   );
 }
