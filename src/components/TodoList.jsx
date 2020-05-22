@@ -2,10 +2,10 @@ import React from 'react';
 import { useRecoilValue } from 'recoil';
 import TodoItem from './TodoItem';
 import TodoItemCreator from './TodoItemCreator';
-import { todoListState } from '../atoms';
+import { filteredTodoListState } from '../selectors';
 
 export default function TodoList() {
-  const todoList = useRecoilValue(todoListState);
+  const todoList = useRecoilValue(filteredTodoListState);
 
   return (
     <div>
