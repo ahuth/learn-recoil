@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "lint": "eslint --ext .js,.jsx src/",
+    "start": "react-scripts start"
   },
   "browserslist": [
     ">0.2%",
