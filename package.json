@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "react-scripts build",
-    "lint": "eslint --ext .js,.jsx src/",
+    "lint": "eslint --ext .js,.ts,.tsx src/",
     "start": "react-scripts start"
   },
   "browserslist": [
@@ -18,5 +18,10 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "recoil": "^0.0.9"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.38",
+    "@types/react-dom": "^16.9.8",
+    "typescript": "^3.9.5"
   }
 }

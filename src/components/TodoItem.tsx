@@ -1,12 +1,16 @@
 import React from 'react';
 import { useRecoilState } from 'recoil';
-import { todoListState } from '../atoms';
+import { todoListState, TodoItem as Item } from '../atoms';
 
-export default function TodoItem({ item }) {
+type Props = {
+  item: Item,
+}
+
+export default function TodoItem({ item }: Props) {
   const [todoList, setTodoList] = useRecoilState(todoListState);
   const index = todoList.findIndex((listItem) => listItem.id === item.id);
 
-  function editItemText(event) {
+  function editItemText(event: React.ChangeEvent<HTMLInputElement>) {
     const newList = replaceItemAtIndex(todoList, index, {
       ...item,
       text: event.target.value,
@@ -43,13 +47,13 @@ export default function TodoItem({ item }) {
   );
 }
 
-function replaceItemAtIndex(list, index, item) {
+function replaceItemAtIndex(list: Item[], index: number, item: Item) {
   const clone = list.slice();
   clone[index] = item;
   return clone;
 }
 
-function removeItemAtIndex(list, index) {
+function removeItemAtIndex(list: Item[], index: number) {
   const clone = list.slice();
   clone.splice(index, 1);
   return clone;

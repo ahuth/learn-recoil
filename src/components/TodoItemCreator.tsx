@@ -15,7 +15,7 @@ export default function TodoItemCreator() {
     setInputValue('');
   }
 
-  function handleChange(event) {
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     setInputValue(event.target.value);
   }
 
