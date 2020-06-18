@@ -3,6 +3,7 @@ import { useRecoilValue } from 'recoil';
 import TodoItem from './TodoItem';
 import TodoItemCreator from './TodoItemCreator';
 import TodoListFilters from './TodoListFilters';
+import TodoListStats from './TodoListStats';
 import { filteredTodoListState } from '../selectors';
 
 export default function TodoList() {
@@ -10,6 +11,7 @@ export default function TodoList() {
 
   return (
     <div>
+      <TodoListStats />
       <TodoItemCreator />
       <TodoListFilters />
       {todoList.map((todoItem) => (
